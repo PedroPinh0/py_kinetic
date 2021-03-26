@@ -20,10 +20,12 @@ pygame.display.set_caption('Kinetic Gas Theory')
 paused = False
 CLOCK = pygame.time.Clock()
 
+
 def UPDATE_SCREEN():
     SCREEN.fill(BLACK)
     RECT = pygame.Rect(8, 8, BOX_width, BOX_height)
     pygame.draw.rect(SCREEN, WHITE, RECT, width=2)
+
 
 def RANDOM(lim_min, lim_max):
     return rd.randint(lim_min, lim_max)
@@ -48,6 +50,7 @@ def MOVE_BALL():
         else:
             BALL[i] = NEXT_POS[i]
     return True
+
 
 # Balls initial position
 BALL = np.array([[0, 0, 0, 0]] * NUMBER_particles)
